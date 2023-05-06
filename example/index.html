@@ -1,37 +1,34 @@
+<!--
+ * @Author: machao
+ * @Date: 2023-04-25 13:04:33
+ * @LastEditors: machao
+ * @LastEditTime: 2023-05-06 17:44:19
+-->
 <!DOCTYPE html>
 <html>
 <head>
   <meta charset="utf-8">
-  <title>vue-infinite-scroll</title>
+  <title>input-time-vue</title>
 </head>
 <body>
-<div class="app"
-     style="height: 1200px;background-color: #ccc;width: 400px;margin: 0 auto;"
-     v-infinite-scroll="loadMore"
-     infinite-scroll-disabled="busy"
-     infinite-scroll-distance="10">
+<div class="app" style="height: 1200px;background-color: #ccc;width: 400px;margin: 0 auto;">
+  <input type="text" v-model="value" @change="onChange" date="2023-05-06" v-input-time>
 </div>
-<script src="https://cdn.css.net/libs/vue/2.0.3/vue.js"></script>
-<script src="../vue-infinite-scroll.js"></script>
+<script src="https://cdn.bootcdn.net/ajax/libs/vue/2.6.10/vue.min.js"></script>
+<script src="../input-time-vue.js"></script>
 <script>
   var app = document.querySelector('.app')
   new Vue({
     el: app,
-    data: function () {
-      return {busy: false}
+    data () {
+      return {
+        value: ''
+      }
     },
+    props: ['input-date'],
     methods: {
-      loadMore: function () {
-        var self = this;
-        self.busy = true;
-        console.log('loading... ' + new Date());
-        setTimeout(function () {
-          var app = document.querySelector('.app')
-          var height = app.clientHeight;
-          app.style.height = height + 300 + 'px';
-          console.log('end... ' + new Date());
-          self.busy = false
-        }, 1000)
+      onChange() {
+        console.log('change')
       }
     }
   })
