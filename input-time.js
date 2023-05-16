@@ -1,8 +1,8 @@
 (function (global, factory) {
-	typeof exports === 'object' && typeof module !== 'undefined' ? module.exports = factory() :
-	typeof define === 'function' && define.amd ? define(factory) :
-	(global.inputTime = factory());
-}(this, (function () { 'use strict';
+	typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports) :
+	typeof define === 'function' && define.amd ? define(['exports'], factory) :
+	(factory((global.inputTime = global.inputTime || {})));
+}(this, (function (exports) { 'use strict';
 
 /**
  * 查找元素
@@ -279,6 +279,9 @@ if (window.Vue) {
 
 InputTime$1.install = install;
 
-return InputTime$1;
+exports.InputTimeVue = InputTimeVue;
+exports['default'] = InputTime$1;
+
+Object.defineProperty(exports, '__esModule', { value: true });
 
 })));

@@ -9,7 +9,7 @@ import resolve from 'rollup-plugin-node-resolve';
 
 export default {
   entry: './src/index.js',
-  dest: 'input-time-vue.js',
+  dest: 'input-time.js',
   plugins: [
     resolve(),
     babel({

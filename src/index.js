@@ -12,4 +12,5 @@ if (window.Vue) {
 InputTime.install = install
 
 export { InputTimeVue }
+// export const InputTimeVue
 export default InputTime
