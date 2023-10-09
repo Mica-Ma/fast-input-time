@@ -2,27 +2,27 @@
  * @Author: machao
  * @Date: 2023-04-25 13:04:33
  * @LastEditors: machao
- * @LastEditTime: 2023-05-06 17:45:46
+ * @LastEditTime: 2023-10-09 15:15:03
 -->
-# input-time
+# fast-input-time
 
 将用户输入的数字串迅速转换成标准的时间格式，为用户提供极为便捷的时间转换服务。
 
 # Install
 
 ```Bash
-npm install input-time --save
+npm install fast-input-time --save
 ```
 
 ## vue
 
 ```JavaScript
 // 全局
-import InputTime from 'input-time'
+import InputTime from 'fast-input-time'
 Vue.use(InputTime)
 
 // 组件内使用
-import { inputTimeVue } from 'input-time'
+import { inputTimeVue } from 'fast-input-time'
 
 new Vue({
   directives: { inputTimeVue }

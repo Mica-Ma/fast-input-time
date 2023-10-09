@@ -1,6 +1,6 @@
 {
   "name": "fast-input-time",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "An Input Time directive for vue.js.",
   "main": "input-time.js",
   "jsnext:main": "./src/index.js",
